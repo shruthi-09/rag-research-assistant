@@ -7,7 +7,7 @@ import json
 import os
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict
+from typing import Dict
 
 from datasets import Dataset
 from ragas import evaluate
@@ -23,7 +23,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from app.rag_pipeline import RAGPipeline, EMBEDDING_MODEL, GROQ_MODEL
+from app.rag_pipeline import RAGPipeline, EMBEDDING_MODEL, GROQ_MODEL  # noqa: E402
 
 EVAL_DATASET = [
     {
@@ -76,7 +76,7 @@ def run_evaluation(pipeline: RAGPipeline, output_dir: str = "evaluation") -> Dic
     ragas_llm = ChatGroq(
         model=GROQ_MODEL,
         temperature=0,
-        api_key=os.environ["GROQ_API_KEY"]
+        api_key=os.environ["GROQ_API_KEY"],
     )
     ragas_emb = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
 
