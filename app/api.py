@@ -6,7 +6,6 @@ Endpoints: /health  /query  /sources
 from contextlib import asynccontextmanager
 from typing import List
 import time
-import os
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,7 +14,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from app.rag_pipeline import RAGPipeline
+from app.rag_pipeline import RAGPipeline  # noqa: E402
 
 pipeline = None
 
