@@ -19,7 +19,7 @@ st.set_page_config(
 
 with st.sidebar:
     st.title("🔬 AI/ML Research RAG")
-    st.markdown("**Powered by:** LLaMA 3 via Groq")
+    st.markdown("**Powered by:** LLaMA 3.1 via Groq")
     st.markdown("**Retrieval:** FAISS + MiniLM embeddings")
     st.markdown("**Evaluation:** RAGAS pipeline")
     st.divider()
