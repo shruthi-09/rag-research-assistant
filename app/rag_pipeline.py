@@ -20,7 +20,7 @@ from langchain_core.output_parsers import StrOutputParser
 
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-GROQ_MODEL      = "llama3-8b-8192"
+GROQ_MODEL      = "llama-3.1-8b-instant"
 CHUNK_SIZE      = 800
 CHUNK_OVERLAP   = 150
 TOP_K           = 4
